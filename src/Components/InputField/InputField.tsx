@@ -3,6 +3,7 @@ import { ColorPicker } from "react-pick-color";
 
 export const InputField: React.FC = () => {
   const [colour, setColour] = useState("");
+  const [showPicker, setShowPicker] = useState(false);
 
   const handleColourChange = (colour: string) => {
     if (colour[0] === "#") {
@@ -18,8 +19,12 @@ export const InputField: React.FC = () => {
         className="input-field"
         value={colour.toUpperCase()}
         onChange={(e) => handleColourChange(e.target.value)}
+        onClick={() => setShowPicker(true)}
       />
-      <div className="colour-picker">
+      <div
+        className={`colour-picker ${showPicker ? "" : "hidden"}`}
+        onMouseLeave={() => setShowPicker(false)}
+      >
         <ColorPicker
           color={colour.toUpperCase()}
           onChange={(colour) => handleColourChange(colour.hex.toUpperCase())}
