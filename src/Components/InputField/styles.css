@@ -13,10 +13,11 @@
 .colour-picker {
   animation: showColourPicker 200ms forwards;
   width: fit-content;
+  position: absolute;
 }
 
 .hidden {
-  animation: hideColourPicker 200ms forwards;
+  animation: hideColourPicker 100ms forwards;
 }
 
 @keyframes showColourPicker {

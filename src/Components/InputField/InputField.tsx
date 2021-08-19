@@ -25,7 +25,6 @@ export const InputField: React.FC = () => {
       <div
         className={`colour-picker ${showPicker ? "" : "hidden"}`}
         onMouseLeave={() => setShowPicker(false)}
-        style={{ display: showPicker ? "block" : "none" }}
       >
         <ColorPicker
           color={colour.toUpperCase()}
