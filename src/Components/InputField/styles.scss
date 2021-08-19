@@ -1,0 +1,50 @@
+$border-radius: 5px;
+$border: 2px solid black;
+$field-height: 45px;
+$font-size: 25px;
+
+.input-field{
+    border: $border;
+    border-radius: $border-radius;
+    height: $field-height;
+    font-size: $font-size;
+    padding-left: 10px;
+}
+
+.input-field:focus{
+    outline: none;
+}
+
+.colour-picker{
+    animation: showColourPicker 200ms forwards;
+    width: fit-content;
+}
+
+.hidden{
+    animation: hideColourPicker 200ms forwards;
+}
+
+@keyframes showColourPicker {
+    from{
+        display: none;
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+        display: block;
+    }
+}
+
+@keyframes hideColourPicker {
+    from{
+        opacity: 1;
+        display: block;
+    }
+
+    to{
+        opacity: 0;
+        display: none;
+    }
+}
+

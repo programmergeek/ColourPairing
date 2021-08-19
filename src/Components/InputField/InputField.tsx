@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ColorPicker } from "react-pick-color";
+import "./styles.css";
 
 export const InputField: React.FC = () => {
   const [colour, setColour] = useState("");
@@ -24,6 +25,7 @@ export const InputField: React.FC = () => {
       <div
         className={`colour-picker ${showPicker ? "" : "hidden"}`}
         onMouseLeave={() => setShowPicker(false)}
+        style={{ display: showPicker ? "block" : "none" }}
       >
         <ColorPicker
           color={colour.toUpperCase()}
