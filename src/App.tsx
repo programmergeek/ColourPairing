@@ -1,11 +1,14 @@
 import React from "react";
 import "./App.css";
-import { InputField } from "./Components";
+import { DropDownMenu } from "./Components";
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <InputField />
+      <DropDownMenu
+        fields={["Background Colour", "Font Colour"]}
+        header="Primary"
+      />
     </div>
   );
 };
