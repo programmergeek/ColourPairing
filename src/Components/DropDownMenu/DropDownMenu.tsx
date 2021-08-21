@@ -27,7 +27,11 @@ export const DropDownMenu: React.FC<Props> = ({ ...props }: Props) => {
       >
         {props.fields.map((field, key) => {
           return (
-            <div className={`field ${isHidden ? "hide" : "show"}`} key={key}>
+            <div
+              className={`field ${isHidden ? "hide" : "show"}`}
+              key={key}
+              style={{ zIndex: props.fields.length - key }}
+            >
               <p className="label"> {field} </p>
               <InputField />
             </div>

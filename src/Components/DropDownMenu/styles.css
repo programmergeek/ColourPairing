@@ -1,6 +1,6 @@
 .field {
   display: grid;
-  grid-template-columns: 20vw 50vw;
+  grid-template-columns: 15vw 10vw;
   margin-top: 10px;
   position: relative;
 }
