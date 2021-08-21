@@ -2,15 +2,27 @@
   display: grid;
   grid-template-columns: 20vw 50vw;
   margin-top: 10px;
+  position: relative;
 }
 
 .fields {
-  position: relative;
+  width: fit-content;
+}
+
+.show {
   animation: showItems 300ms linear forwards;
 }
 
 .hide {
   animation: hideItems 300ms linear forwards;
+}
+
+.show-fields {
+  animation: showFields 300ms linear forwards;
+}
+
+.hide-fields {
+  animation: hideFields 300ms linear forwards;
 }
 
 @keyframes showItems {
@@ -30,9 +42,29 @@
     left: 0;
   }
   to {
-    visibility: hidden;
+    visibility: collapse;
     opacity: 0;
     left: -30px;
+  }
+}
+@keyframes hideFields {
+  from {
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes showFields {
+  from {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
   }
 }
 

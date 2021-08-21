@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const DropDownMenu: React.FC<Props> = ({ ...props }: Props) => {
-  const [isHidden, setIsHidden] = useState(false);
+  const [isHidden, setIsHidden] = useState(true);
 
   return (
     <div className="drop-menu-container">
@@ -21,10 +21,13 @@ export const DropDownMenu: React.FC<Props> = ({ ...props }: Props) => {
         {" "}
         {props.header}{" "}
       </p>
-      <div className={`fields ${isHidden ? "hide" : "show"}`}>
+      <div
+        className={`fields ${isHidden ? "hide-fields" : "show-fields"}`}
+        style={{ height: props.fields.length * 70 }}
+      >
         {props.fields.map((field, key) => {
           return (
-            <div className="field" key={key}>
+            <div className={`field ${isHidden ? "hide" : "show"}`} key={key}>
               <p className="label"> {field} </p>
               <InputField />
             </div>
