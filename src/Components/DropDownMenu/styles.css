@@ -9,6 +9,10 @@
   animation: showItems 300ms linear forwards;
 }
 
+.hide {
+  animation: hideItems 300ms linear forwards;
+}
+
 @keyframes showItems {
   from {
     visibility: hidden;
@@ -18,6 +22,17 @@
   to {
     opacity: 1;
     left: 0px;
+  }
+}
+@keyframes hideItems {
+  from {
+    opacity: 1;
+    left: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+    left: -30px;
   }
 }
 
