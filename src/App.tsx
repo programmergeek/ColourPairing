@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { DropDownMenu } from "./Components";
+import { DropDownMenu, CodeBlock } from "./Components";
 
 const App: React.FC = () => {
   return (
@@ -9,6 +9,8 @@ const App: React.FC = () => {
         fields={["Background Colour", "Font Colour"]}
         header="Primary"
       />
+
+      <CodeBlock colours={{ background: "#000", text: "#fff" }} />
     </div>
   );
 };
