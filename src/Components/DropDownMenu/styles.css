@@ -10,11 +10,11 @@
 }
 
 .show {
-  animation: showItems 300ms linear forwards;
+  animation: showItems 200ms linear forwards;
 }
 
 .hide {
-  animation: hideItems 300ms linear forwards;
+  animation: hideItems 200ms linear forwards;
 }
 
 .show-fields {
