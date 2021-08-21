@@ -1,1 +1,25 @@
 @use '../base.scss';
+
+.field{
+    display: grid;
+    grid-template-columns: 20vw 50vw;
+    margin-top: 10px;
+}
+
+.fields{
+    position: relative;
+    animation: showItems 300ms linear forwards;
+}
+
+@keyframes showItems {
+    from{
+        visibility: hidden;
+        opacity: 0;
+        left: -30px;
+    }
+
+    to{
+        opacity: 1;
+        left: 0px;
+    }
+}
