@@ -5,18 +5,18 @@ interface Props {
   colours: {
     background: string;
     text: string;
-    primary?: {
-      primary: string;
+    primaryButton?: {
+      background: string;
       border: string;
       text: string;
     };
-    secondary?: {
-      primary: string;
+    secondaryButton?: {
+      background: string;
       border: string;
       text: string;
     };
-    tertiary?: {
-      primary: string;
+    tertiaryButton?: {
+      background: string;
       border: string;
       text: string;
     };
@@ -28,5 +28,11 @@ interface Props {
 }
 
 export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
-  return <div></div>;
+  const stylesCSS = `
+    --background-colour: ${props.colours.background};
+    --text-colour: ${props.colours.text};
+    --primary-button-background-colour: ${props.colours.primaryButton?.background}
+    `;
+
+  return <div className="code-block-container"></div>;
 };
