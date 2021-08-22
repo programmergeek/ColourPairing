@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 interface Props {
@@ -44,16 +44,36 @@ const varNames = [
 ];
 
 export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
+  const [isCSS, setIsCSS] = useState(true);
+
   return (
-    <div className="code-block-container">
-      <p
-        className="copy"
-        onClick={() => {
-          navigator.clipboard.writeText("This is Sparta");
-        }}
-      >
-        Copy
-      </p>
+    <div className="code-container">
+      <div id="styles">
+        <p
+          id="css"
+          className={`${isCSS ? "selected" : ""}`}
+          onClick={() => setIsCSS(true)}
+        >
+          CSS
+        </p>
+        <p
+          id="scss"
+          className={`${isCSS ? "" : "selected"}`}
+          onClick={() => setIsCSS(false)}
+        >
+          Sass
+        </p>
+      </div>
+      <div className="code-block-container">
+        <p
+          className="copy"
+          onClick={() => {
+            navigator.clipboard.writeText("This is Sparta");
+          }}
+        >
+          Copy
+        </p>
+      </div>
     </div>
   );
 };
