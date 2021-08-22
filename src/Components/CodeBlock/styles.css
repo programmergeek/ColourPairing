@@ -1,0 +1,19 @@
+.code-block-container {
+  height: 300px;
+  width: 40vw;
+  background-color: #0F2433;
+  border-radius: 10px;
+}
+
+.copy {
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.copy:active {
+  color: #cfcfcf;
+}
+
+/*# sourceMappingURL=styles.css.map */

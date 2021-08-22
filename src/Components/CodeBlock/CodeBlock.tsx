@@ -28,5 +28,17 @@ interface Props {
 }
 
 export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
-  return <div className="code-block-container"> </div>;
+  return (
+    <div className="code-block-container">
+      <p
+        className="copy"
+        onClick={() => {
+          navigator.clipboard.writeText("This is Sparta");
+        }}
+      >
+        Copy
+      </p>
+      <p className="code"></p>
+    </div>
+  );
 };
