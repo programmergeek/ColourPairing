@@ -27,6 +27,22 @@ interface Props {
   };
 }
 
+const varNames = [
+  "background-colour",
+  "text-colour",
+  "primary-button-background-colour",
+  "primary-button-border-colour",
+  "primary-button-text-colour",
+  "secondary-button-background-colour",
+  "secondary-button-border-colour",
+  "secondary-button-text-colour",
+  "tertiary-button-background-colour",
+  "tertiary-button-border-colour",
+  "tertiary-button-text-colour",
+  "primary-art-colour",
+  "secondary-art-colour",
+];
+
 export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
   return (
     <div className="code-block-container">
@@ -38,7 +54,6 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
       >
         Copy
       </p>
-      <p className="code"></p>
     </div>
   );
 };
