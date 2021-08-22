@@ -10,7 +10,17 @@ const App: React.FC = () => {
         header="Primary"
       />
 
-      <CodeBlock colours={{ background: "#000", text: "#fff" }} />
+      <CodeBlock
+        colours={{
+          background: "#000",
+          text: "#fff",
+          primaryButton: {
+            background: "#1f2ea5",
+            border: "#222",
+            text: "#fff",
+          },
+        }}
+      />
     </div>
   );
 };
