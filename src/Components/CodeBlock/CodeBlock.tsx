@@ -68,7 +68,15 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
         <p
           className="copy"
           onClick={() => {
-            navigator.clipboard.writeText("This is Sparta");
+            const variables = document.getElementsByClassName("style-var");
+            navigator.clipboard.writeText("");
+            navigator.clipboard.readText().then(() => {
+              let t = "";
+              for (let i = 0; i < variables.length; i++) {
+                t += variables[i].textContent + "\n";
+              }
+              navigator.clipboard.writeText(t);
+            });
           }}
         >
           Copy
@@ -76,14 +84,18 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
         <code className="variables">
           html{"{"}
           <br />
-          {`${isCSS ? "--" : "$"}`}
-          {`${varNames[0]} : ${props.colours.background};`}
+          <code className="style-var">
+            {`${isCSS ? "--" : "$"}`}
+            {`${varNames[0]} : ${props.colours.background};`}
+          </code>
           <br />
-          {`${isCSS ? "--" : "$"}`}
-          {`${varNames[1]} : ${props.colours.text};`}
+          <code className="style-var">
+            {`${isCSS ? "--" : "$"}`}
+            {`${varNames[1]} : ${props.colours.text};`}
+          </code>
           <br />
           {props.colours.primaryButton ? (
-            <code>
+            <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[2]} : ${
                 props.colours.primaryButton.background
               };`}
@@ -91,7 +103,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
             </code>
           ) : null}
           {props.colours.primaryButton ? (
-            <code>
+            <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[3]} : ${
                 props.colours.primaryButton.border
               };`}
@@ -99,7 +111,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
             </code>
           ) : null}
           {props.colours.primaryButton ? (
-            <code>
+            <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[4]} : ${
                 props.colours.primaryButton.text
               };`}
@@ -107,7 +119,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
             </code>
           ) : null}
           {props.colours.secondaryButton ? (
-            <code>
+            <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[5]} : ${
                 props.colours.secondaryButton.background
               };`}
@@ -115,7 +127,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
             </code>
           ) : null}
           {props.colours.secondaryButton ? (
-            <code>
+            <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[6]} : ${
                 props.colours.secondaryButton.border
               };`}
@@ -123,7 +135,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
             </code>
           ) : null}
           {props.colours.secondaryButton ? (
-            <code>
+            <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[7]} : ${
                 props.colours.secondaryButton.text
               };`}
@@ -131,7 +143,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
             </code>
           ) : null}
           {props.colours.tertiaryButton ? (
-            <code>
+            <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[8]} : ${
                 props.colours.tertiaryButton.background
               };`}{" "}
@@ -139,7 +151,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
             </code>
           ) : null}
           {props.colours.tertiaryButton ? (
-            <code>
+            <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[9]} : ${
                 props.colours.tertiaryButton.border
               };`}
@@ -147,7 +159,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
             </code>
           ) : null}
           {props.colours.tertiaryButton ? (
-            <code>
+            <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[10]} : ${
                 props.colours.tertiaryButton.text
               };`}
@@ -155,7 +167,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
             </code>
           ) : null}
           {props.colours.clipArt ? (
-            <code>
+            <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[11]} : ${
                 props.colours.clipArt.primary
               };`}
@@ -163,7 +175,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
             </code>
           ) : null}
           {props.colours.clipArt ? (
-            <code>
+            <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[12]} : ${
                 props.colours.clipArt.secondary
               };`}
