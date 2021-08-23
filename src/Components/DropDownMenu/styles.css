@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap");
+.drop-menu-container .header {
+  font-family: "Press Start 2P", cursive;
+  font-size: 25px;
+}
+
 .field {
   display: grid;
   grid-template-columns: 15vw 10vw;
@@ -7,6 +13,11 @@
 
 .fields {
   width: fit-content;
+}
+
+.label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
 }
 
 .show {

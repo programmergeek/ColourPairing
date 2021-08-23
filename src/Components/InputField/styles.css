@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap");
 .input-field {
+  font-family: "Quicksand", sans-serif;
   border: 2px solid black;
   border-radius: 5px;
   height: 45px;

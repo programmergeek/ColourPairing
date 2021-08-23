@@ -1,3 +1,6 @@
+@use '../base.scss';
+@import url(base.$font-import);
+
 .code-container{
     width: fit-content;
 }
@@ -22,6 +25,7 @@
         margin-left: 10px;
         margin-bottom: 5px;
         cursor: pointer;
+        font-family: base.$label-font;
     }
 }
 
@@ -30,6 +34,7 @@
 }
 
 .copy{
+    font-family: base.$label-font;
     text-align: right;
     color: white;
     cursor: pointer;

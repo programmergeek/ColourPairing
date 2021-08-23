@@ -1,4 +1,12 @@
 @use '../base.scss';
+@import url(base.$font-import);
+
+.drop-menu-container{
+    .header{
+        font-family: base.$header-font;
+        font-size: 25px;
+    }
+}
 
 .field{
     display: grid;
@@ -9,6 +17,11 @@
 
 .fields{
     width: fit-content;
+}
+
+.label{
+    font-family: base.$label-font;
+    font-size: base.$label-font-size;
 }
 
 .show{
