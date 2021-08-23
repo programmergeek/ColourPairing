@@ -1,3 +1,7 @@
+.code-container{
+    width: fit-content;
+}
+
 .code-block-container{
     height: fit-content;
     max-height: 450px;
@@ -5,13 +9,32 @@
     background-color: #0F2433;
     border-radius: 10px;
     padding: 15px;
+    padding-bottom: 35px;
+}
+
+#styles{
+    display: flex;
+    justify-content: flex-end;
+    width: 520px;
+
+    p{
+        margin: 0;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+}
+
+.selected{
+    color: #7851A9;
 }
 
 .copy{
-    position: absolute;
+    text-align: right;
     color: white;
     cursor: pointer;
     text-decoration: underline;
+    margin: 0;
 }
 
 .copy:active{
