@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { ColorPicker } from "react-pick-color";
 import "./styles.css";
 
-export const InputField: React.FC = () => {
+interface Props {
+  onChange?: (colour: string) => void;
+}
+
+export const InputField: React.FC<Props> = ({ ...props }: Props) => {
   const [colour, setColour] = useState("");
   const [showPicker, setShowPicker] = useState(false);
 
@@ -12,6 +16,7 @@ export const InputField: React.FC = () => {
     } else {
       setColour(`#${colour}`);
     }
+    if (props.onChange) props.onChange(colour);
   };
 
   return (
