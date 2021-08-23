@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { DropDownMenu, CodeBlock } from "./Components";
 
 const App: React.FC = () => {
+  const [state, setState] = useState({});
   return (
     <div className="App">
       <DropDownMenu
         fields={["Background Colour", "Font Colour"]}
         header="Primary"
+        onChange={(e) => setState(e)}
       />
 
       <CodeBlock
@@ -21,6 +23,7 @@ const App: React.FC = () => {
           },
         }}
       />
+      {console.log(state)}
     </div>
   );
 };
