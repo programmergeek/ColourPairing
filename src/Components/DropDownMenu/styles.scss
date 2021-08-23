@@ -6,11 +6,12 @@
         font-family: base.$header-font;
         font-size: 25px;
     }
+    width: 550px;
 }
 
 .field{
     display: grid;
-    grid-template-columns: 15vw 10vw;
+    grid-template-columns: 200px 200px;
     margin-top: 10px;
     position: relative;
 }
@@ -44,12 +45,12 @@
     from{
         visibility: hidden;
         opacity: 0;
-        left: -30px;
+        left: 0px;
     }
 
     to{
         opacity: 1;
-        left: 0px;
+        left: 20px;
     }
 }
 

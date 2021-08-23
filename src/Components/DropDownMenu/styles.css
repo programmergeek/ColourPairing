@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap");
+.drop-menu-container {
+  width: 550px;
+}
 .drop-menu-container .header {
   font-family: "Press Start 2P", cursive;
   font-size: 25px;
@@ -6,7 +9,7 @@
 
 .field {
   display: grid;
-  grid-template-columns: 15vw 10vw;
+  grid-template-columns: 200px 200px;
   margin-top: 10px;
   position: relative;
 }
@@ -40,11 +43,11 @@
   from {
     visibility: hidden;
     opacity: 0;
-    left: -30px;
+    left: 0px;
   }
   to {
     opacity: 1;
-    left: 0px;
+    left: 20px;
   }
 }
 @keyframes hideItems {
