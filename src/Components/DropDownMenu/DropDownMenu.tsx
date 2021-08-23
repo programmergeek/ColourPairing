@@ -10,7 +10,7 @@ interface Props {
 
 export const DropDownMenu: React.FC<Props> = ({ ...props }: Props) => {
   const [isHidden, setIsHidden] = useState(true);
-  const [colours, setColours] = useState<Record<string, unknown>>();
+  const [, setColours] = useState<Record<string, unknown>>({});
 
   return (
     <div className="drop-menu-container">
@@ -38,16 +38,16 @@ export const DropDownMenu: React.FC<Props> = ({ ...props }: Props) => {
               <InputField
                 onChange={(e) => {
                   setColours((colours) => {
-                    return { [props.header]: { ...colours, [field]: e } };
+                    colours = { ...colours, [field]: e };
+                    if (props.onChange)
+                      props.onChange(colours as Record<string, unknown>);
+                    return colours;
                   });
-                  if (props.onChange)
-                    props.onChange(colours as Record<string, unknown>);
                 }}
               />
             </div>
           );
         })}
-        {console.log(colours)}
       </div>
     </div>
   );
