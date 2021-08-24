@@ -4,13 +4,20 @@
 .colour-settings{
 
     height: 600px;
-    border: 1px solid black;
     width: fit-content;
     padding: 20px;
     border-radius: 15px;
     overflow: auto;
     scrollbar-color: #dadada white;
     scrollbar-width: thin;
+    box-shadow:
+  0 10px 3.1px rgba(0, 0, 0, 0.017),
+  0 19.3px 7.4px rgba(0, 0, 0, 0.025),
+  0 27.9px 13.9px rgba(0, 0, 0, 0.028),
+  0 36.3px 24.8px rgba(0, 0, 0, 0.03),
+  0 46.5px 46.4px rgba(0, 0, 0, 0.034),
+  0 66px 111px rgba(0, 0, 0, 0.05)
+;
 
     .header-cs{
         font-family: base.$header-font;
