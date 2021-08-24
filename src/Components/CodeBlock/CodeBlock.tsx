@@ -1,31 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-
-interface Props {
-  colours: {
-    background: string;
-    text: string;
-    primaryButton?: {
-      "Background Colour": string;
-      "Border Colour": string;
-      "Text Colour": string;
-    };
-    secondaryButton?: {
-      "Background Colour": string;
-      "Border Colour": string;
-      "Text Colour": string;
-    };
-    tertiaryButton?: {
-      "Background Colour": string;
-      "Border Colour": string;
-      "Text Colour": string;
-    };
-    clipArt?: {
-      "Primary Colour": string;
-      "Secondary Colour"?: string;
-    };
-  };
-}
+import { Props } from "../typeDefinitions";
 
 const varNames = [
   "background-colour",
@@ -82,7 +57,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
           Copy
         </p>
         <code className="variables">
-          html{"{"}
+          {"html {"}
           <br />
           <code className="style-var">
             {`${isCSS ? "--" : "$"}`}
@@ -105,7 +80,7 @@ export const CodeBlock: React.FC<Props> = ({ ...props }: Props) => {
           {props.colours.primaryButton ? (
             <code className="style-var">
               {`${isCSS ? "--" : "$"}${varNames[3]} : ${
-                props.colours.primaryButton["Background Colour"]
+                props.colours.primaryButton["Border Colour"]
               };`}
               <br />
             </code>
