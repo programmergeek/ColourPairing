@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  height: 100vh;
+  background: linear-gradient(116.82deg, rgba(62, 180, 137, 0.45) 0%, #7851A9 100%) no-repeat;
 }
 
 code {

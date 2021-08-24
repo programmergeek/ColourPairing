@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap");
 .colour-settings {
+  background-color: white;
   height: 600px;
   width: fit-content;
   padding: 20px;
-  border-radius: 15px;
   overflow: auto;
   scrollbar-color: #dadada white;
   scrollbar-width: thin;
