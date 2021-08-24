@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ColourPairing/static/css/main.62ff99dc.chunk.css",
+    "main.js": "/ColourPairing/static/js/main.8faae5bb.chunk.js",
+    "main.js.map": "/ColourPairing/static/js/main.8faae5bb.chunk.js.map",
+    "runtime-main.js": "/ColourPairing/static/js/runtime-main.7ae76c82.js",
+    "runtime-main.js.map": "/ColourPairing/static/js/runtime-main.7ae76c82.js.map",
+    "static/js/2.dec5d67b.chunk.js": "/ColourPairing/static/js/2.dec5d67b.chunk.js",
+    "static/js/2.dec5d67b.chunk.js.map": "/ColourPairing/static/js/2.dec5d67b.chunk.js.map",
+    "static/js/3.6e701b2b.chunk.js": "/ColourPairing/static/js/3.6e701b2b.chunk.js",
+    "static/js/3.6e701b2b.chunk.js.map": "/ColourPairing/static/js/3.6e701b2b.chunk.js.map",
+    "index.html": "/ColourPairing/index.html",
+    "static/css/main.62ff99dc.chunk.css.map": "/ColourPairing/static/css/main.62ff99dc.chunk.css.map",
+    "static/js/2.dec5d67b.chunk.js.LICENSE.txt": "/ColourPairing/static/js/2.dec5d67b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ae76c82.js",
+    "static/js/2.dec5d67b.chunk.js",
+    "static/css/main.62ff99dc.chunk.css",
+    "static/js/main.8faae5bb.chunk.js"
+  ]
+}
