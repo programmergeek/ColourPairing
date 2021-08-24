@@ -1,0 +1,22 @@
+@use '../../Components/base.scss';
+@import url(base.$font-import);
+
+.colour-settings{
+    .header{
+        font-family: base.$header-font;
+        width: fit-content;
+        margin: 0;
+    }
+
+    #background-and-text{
+        display: grid;
+        grid-template-columns: 220px 220px;
+        column-gap: 50px;
+        position: relative;
+        top: 50px;
+
+        .input-field{
+            width: 220px;
+        }
+    }
+}

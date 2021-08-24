@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap");
+.colour-settings .header {
+  font-family: "Press Start 2P", cursive;
+  width: fit-content;
+  margin: 0;
+}
+.colour-settings #background-and-text {
+  display: grid;
+  grid-template-columns: 220px 220px;
+  column-gap: 50px;
+  position: relative;
+  top: 50px;
+}
+.colour-settings #background-and-text .input-field {
+  width: 220px;
+}
+
+/*# sourceMappingURL=styles.css.map */
