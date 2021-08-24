@@ -25,10 +25,6 @@ $font-size: 25px;
     position:absolute;
 }
 
-.hidden{
-    animation: hideColourPicker 100ms forwards;
-}
-
 @keyframes showColourPicker {
     from{
         opacity: 0;
@@ -39,15 +35,3 @@ $font-size: 25px;
         opacity: 1;
     }
 }
-
-@keyframes hideColourPicker {
-    from{
-        opacity: 1;
-    }
-    
-    to{
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-

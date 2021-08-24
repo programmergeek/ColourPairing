@@ -28,7 +28,8 @@ export const InputField: React.FC<Props> = ({ ...props }: Props) => {
         onClick={() => setShowPicker(true)}
       />
       <div
-        className={`colour-picker ${showPicker ? "" : "hidden"}`}
+        className={`colour-picker`}
+        style={{ display: showPicker ? "block" : " none" }}
         onMouseLeave={() => setShowPicker(false)}
       >
         <ColorPicker

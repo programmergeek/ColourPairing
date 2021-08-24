@@ -18,10 +18,6 @@
   position: absolute;
 }
 
-.hidden {
-  animation: hideColourPicker 100ms forwards;
-}
-
 @keyframes showColourPicker {
   from {
     opacity: 0;
@@ -29,15 +25,6 @@
   }
   to {
     opacity: 1;
-  }
-}
-@keyframes hideColourPicker {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
   }
 }
 
