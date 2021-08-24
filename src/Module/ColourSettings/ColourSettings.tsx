@@ -3,7 +3,13 @@ import { CodeBlock, DropDownMenu, InputField } from "../../Components";
 import { Props } from "../../Components/typeDefinitions";
 import "./styles.css";
 
-export const ColourSettings: React.FC = () => {
+interface ColourSettingProps {
+  onChange?: (colours: Props) => void;
+}
+
+export const ColourSettings: React.FC<ColourSettingProps> = ({
+  ...props
+}: ColourSettingProps) => {
   const [colours, setColours] = useState<Props>({
     colours: {
       background: "",
@@ -21,7 +27,7 @@ export const ColourSettings: React.FC = () => {
             onChange={(input) => {
               setColours((currentState) => {
                 currentState.colours["background"] = input;
-                console.log(currentState);
+                if (props.onChange) props.onChange(currentState);
                 return { ...currentState };
               });
             }}
@@ -33,6 +39,7 @@ export const ColourSettings: React.FC = () => {
             onChange={(textColour) => {
               setColours((currentState) => {
                 currentState.colours["text"] = textColour;
+                if (props.onChange) props.onChange(currentState);
                 return { ...currentState };
               });
             }}
@@ -47,6 +54,7 @@ export const ColourSettings: React.FC = () => {
             onChange={(primaryColours) => {
               setColours((currentState) => {
                 currentState.colours["primaryButton"] = primaryColours;
+                if (props.onChange) props.onChange(currentState);
                 return { ...currentState };
               });
             }}
@@ -59,6 +67,7 @@ export const ColourSettings: React.FC = () => {
             onChange={(secondaryColours) => {
               setColours((currentState) => {
                 currentState.colours["secondaryButton"] = secondaryColours;
+                if (props.onChange) props.onChange(currentState);
                 return { ...currentState };
               });
             }}
@@ -71,6 +80,7 @@ export const ColourSettings: React.FC = () => {
             onChange={(tertiaryColours) => {
               setColours((currentState) => {
                 currentState.colours["tertiaryButton"] = tertiaryColours;
+                if (props.onChange) props.onChange(currentState);
                 return { ...currentState };
               });
             }}
@@ -83,6 +93,7 @@ export const ColourSettings: React.FC = () => {
             onChange={(artColours) => {
               setColours((currentState) => {
                 currentState.colours["clipArt"] = artColours;
+                if (props.onChange) props.onChange(currentState);
                 return { ...currentState };
               });
             }}
