@@ -6,6 +6,8 @@
   padding: 20px;
   border-radius: 15px;
   overflow: auto;
+  scrollbar-color: #dadada white;
+  scrollbar-width: thin;
 }
 .colour-settings .header-cs {
   font-family: "Press Start 2P", cursive;
@@ -21,6 +23,24 @@
 .colour-settings #background-and-text .input-field {
   width: 220px;
   margin-bottom: 5px;
+}
+
+.colour-settings::-webkit-scrollbar {
+  width: 7px;
+}
+
+.colour-settings::-webkit-scrollbar-track {
+  background: white;
+  margin: 10px;
+}
+
+.colour-settings::-webkit-scrollbar-thumb {
+  background: #dadada;
+  border-radius: 15px;
+}
+
+.colour-settings::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0;
 }
 
 /*# sourceMappingURL=styles.css.map */
