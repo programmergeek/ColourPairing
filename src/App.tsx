@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { ColourSettings } from "./Module";
+import { Props } from "./Components/typeDefinitions";
+import { ColourSettings, Output } from "./Module";
 
 const App: React.FC = () => {
+  const [state, setState] = useState<Props>({
+    colours: {
+      background: "#fff",
+      text: "#000",
+    },
+  });
+
   return (
     <div className="App">
-      <ColourSettings />
+      <ColourSettings
+        onChange={(colours) => {
+          setState(colours);
+        }}
+      />
+      <Output colours={state?.colours} />
     </div>
   );
 };
