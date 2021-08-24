@@ -5,6 +5,7 @@
 .drop-menu-container .header {
   font-family: "Press Start 2P", cursive;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .field {

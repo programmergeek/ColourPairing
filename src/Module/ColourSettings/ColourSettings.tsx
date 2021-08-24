@@ -12,8 +12,8 @@ export const ColourSettings: React.FC<ColourSettingProps> = ({
 }: ColourSettingProps) => {
   const [colours, setColours] = useState<Props>({
     colours: {
-      background: "",
-      text: "",
+      background: "#fff",
+      text: "#000",
     },
   });
 
@@ -21,7 +21,7 @@ export const ColourSettings: React.FC<ColourSettingProps> = ({
     <div className="colour-settings">
       <h1 className="header-cs">Colour Settings</h1>
       <div id="background-and-text">
-        <div id="background">
+        <div id="background" style={{ zIndex: 1000 }}>
           <label className="label"> Background Colour</label>
           <InputField
             onChange={(input) => {
@@ -33,7 +33,7 @@ export const ColourSettings: React.FC<ColourSettingProps> = ({
             }}
           />
         </div>
-        <div id="text">
+        <div id="text" style={{ zIndex: 1000 }}>
           <label className="label"> Text Colour</label>
           <InputField
             onChange={(textColour) => {

@@ -1,0 +1,9 @@
+.App{
+    display: flex;
+}
+
+.colour-settings{
+    position: absolute;
+    left: 55%;
+    top: 15px;
+}

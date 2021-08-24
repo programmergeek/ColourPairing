@@ -4,10 +4,7 @@ import "./styles.css";
 
 export const Output: React.FC<Props> = ({ ...props }: Props) => {
   return (
-    <div
-      className="output-container"
-      style={{ border: "1px solid black", position: "absolute" }}
-    >
+    <div className="output-container" style={{ position: "absolute" }}>
       <svg
         width="600"
         height="600"
