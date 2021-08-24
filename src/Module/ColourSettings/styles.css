@@ -1,18 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap");
-.colour-settings .header {
-  font-family: "Press Start 2P", cursive;
+.colour-settings {
+  height: 95%;
+  border: 1px solid black;
   width: fit-content;
+  padding: 20px;
+  border-radius: 15px;
+}
+.colour-settings .header-cs {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
   margin: 0;
+  margin-bottom: 35px;
 }
 .colour-settings #background-and-text {
   display: grid;
   grid-template-columns: 220px 220px;
   column-gap: 50px;
-  position: relative;
-  top: 50px;
 }
 .colour-settings #background-and-text .input-field {
   width: 220px;
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

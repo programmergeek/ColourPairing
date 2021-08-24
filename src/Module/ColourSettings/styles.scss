@@ -2,21 +2,30 @@
 @import url(base.$font-import);
 
 .colour-settings{
-    .header{
+
+    height: 95%;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 15px;
+
+    .header-cs{
         font-family: base.$header-font;
-        width: fit-content;
+        text-align: center;
         margin: 0;
+        margin-bottom: 35px;
     }
 
     #background-and-text{
         display: grid;
         grid-template-columns: 220px 220px;
         column-gap: 50px;
-        position: relative;
-        top: 50px;
-
+        
         .input-field{
             width: 220px;
+            margin-bottom: 5px;
         }
     }
+
+    
 }
